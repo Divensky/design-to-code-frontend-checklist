@@ -72,19 +72,19 @@ body {
     background-color: green;
 }
 ```
-Then open the HTML file. You should see the page with the style you’ve assigned. If any problem, see if you’ve made a typo somewhere, maybe in the path to your CSS file or the filename. Once it works, congratulate yourself: your project is live! 
+Then open the HTML file. You should see the page with the style you’ve assigned. If any problem, see if you’ve made a typo somewhere, maybe in the path to your CSS file or the filename. Once it works, congratulate yourself: your project is live! 👏
 
 9. Enable a preview of the document you're creating. Many tools include a `watch` function that will update your project whenever you make any changes. Or you might use a Live Server extension in VS Code.
 
 ## III. Analyze 
 
-10. Examine the design and identify the **macro-layout** elements, such as the header, sections, aside, footer, etc. Look for potentially reusable components or patterns. Visually represent your macro-layout by sketching it on paper. 
+10. Examine the design and identify the **macro-layout** elements, such as the header, sections, aside, footer, etc. Look for potentially reusable components or patterns. It's helpful to visually represent your macro-layout by sketching it on paper. 
 
-11. Identify the requirements and constraints for your project. At least, find out if this website is going to be viewed primarily on mobile or desktop devices. Add any needed steps to this checklist based on your requirements. 
+11. Identify the requirements and constraints for your project. At least, find out if this website is going to be viewed primarily on mobile or desktop devices. Add any needed steps to this checklist based on your specific requirements: maybe you need to focus on accessibility, integration, etc. 
 
 ## IV. Create the HTML markup
 
-Note: The following steps of the checklist may be done by sections of your design. That is, you code one section by following the below steps, then the next section, etc. 
+Note: The following steps of the checklist may be done by sections of your design. That is, you code one section as below, then the next section, etc. 
 
 12. Implement the macro-layout in your HTML file by putting necessary tags for the header, main, sections, aside, footer, etc. Use tag names that are descriptive of their content: for example, use `<section>` or `<figure>` rather than a `<div>`. Consider including "container" divs where you know you’ll need them. If you have both desktop and mobile versions, follow the desktop layout in the HTML. 
 
@@ -92,6 +92,56 @@ Note: The following steps of the checklist may be done by sections of your desig
 
 14. Focus on the macro-layout. If the design includes many small details, for example in a `<table>` or a `<form>`, you might want to skip them for the moment and come back to them after you’ve got your macro-layout working in both HTML and CSS.
     
+## V. Create the first part of the CSS code
+
+15. Position the preview of your file alongside the design file on your screen so you can see both simultaneously to check your output. 
+
+16. Select the CSS naming methodology or library you’re going to use. (Maybe [BEM](http://getbem.com/introduction/) or something else.)  
+
+17. Write any initial CSS styles that apply to the entire document. The common points to consider at this stage are: 
+- Set the `body` margin to 0, as the browser adds an automatic margin of 8px.
+- Create a `.container` style to define the max-width of your project and to center it. 
+- Create any needed custom properties in the root, for example for the theme-color:
+```
+:root {
+  --theme-color: #314f9b;
+}
+```
+- Perhaps use CSS reset or normalize browser default styles if this is preferred by your team. 
+- If not using reset, perhaps you want to set box-sizing for the entire project: 
+```
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+```
+- If relevant, set max-width for images:
+```
+img {
+  max-width: 100%;
+}
+```
+
+## VI. Add the fonts 
+
+18. Identify the fonts used in the design. 
+
+19. Connect the fonts.
+    
+- If you use Google Fonts or a similar font hosting service, include the `<link>` element(s) for the font(s) under `<head>` in your HTML, above the link to your style.css. Be aware that while this option is easier, it might not be as performant. 
+- Alternatively, download the fonts into your project and connect them from there. [Google Fonts Helper](https://gwfh.mranftl.com/) might help. Select the "Modern Browser" option. Copy the `@font-face` CSS rule(s) into your CSS file, download the zip file with fonts and extract them into the Fonts folder. Make sure that the path to this folder inside the `@font-face` rule(s) is correct. 
+
+Then, in your CSS file, assign the font and provide a generic fallback font. Example: 
+```
+body {
+  font-family: Roboto, sans-serif;
+}
+```
+
+You should now see the new font in your preview. 
 
 
    
