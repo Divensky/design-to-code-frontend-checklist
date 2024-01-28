@@ -181,13 +181,13 @@ You should now see the new font in your preview.
     );
 ```
 
-25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. 
+25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. Preview your images on the page and ensure they display correctly at different screen widths, zoom levels, and in different browsers.
 
 ## VIX. Complete the section at hand
 
 26. If you have earlier identified that your website is going to be viewed primarily on mobile devices, then follow a mobile-first approach in your CSS, creating the basic appearance of your page to fit a mobile device and then expanding it with media queries for larger screens. Start with a large page block. 
 
-27. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your desgin file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
+27. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your design file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
 
 28. Where applicable, convert fixed sizes to relative sizes to create a responsive webpage. This may include percentages or viewpoint width/height values, media queries, fluid font sizes (with relevant em/rem values for paddings and margins), etc. 
 
@@ -195,8 +195,13 @@ You should now see the new font in your preview.
 
 30. Proceed to **micro-layout** once satisfied with a macro-layout of your page or section. Before coding each micro-layout, analyze it as you did with macro-layouts. Implement a micro-layout in HTML and CSS. Choose HTML tags that best represent the content, use responsive design and the other principles given in this checklist. Preview your micro-layout in different browsers. 
 
-31. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Including an `outline-color` for `focus-visible` state. Ensure that the styles provide good contrast in the preview. Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
+31. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Include an `outline-color` for the `:focus-visible` state. Ensure that the styles provide good contrast in the preview. Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
 
+## Part X. Final test 
 
+32. Preview your completed section or page at different screen widths, zoom levels, and in different browsers. If your preview looks different than what you’d expect it to, use the browser’s Dev Tools to help spot the cause. You will soon see the page that displays the way you want to! 
 
+***
+
+It may seem like a lot, but in reality, once you get familiar with it, this is easy. Just go step by step, and you will be rewarded with a beautiful, live page that you’ve created out of nothing!  
    
