@@ -143,20 +143,59 @@ body {
 
 You should now see the new font in your preview. 
 
-## VII. Complete the section at hand
+## VII. Export images from the design
 
-20. If you have earlier identified that your website is going to be viewed primarily on mobile devices, then follow a mobile-first approach in your CSS, creating the basic appearance of your page to fit a mobile device and then expanding it with media queries for larger screens. Start with a large page block. 
+20. Conditional: if an image has rounded corners, or has overlying elements, or has opacity or such effects applied, remove these effects before exporting your image so you can then implement these effects through CSS. 
 
-21. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your desgin file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
+21. Export any images from your design file. Use the following guidelines:  
 
-22. Where applicable, convert fixed sizes to relative sizes to create a responsive webpage. This may include percentages or viewpoint width/height values, media queries, fluid font sizes (with relevant em/rem values for paddings and margins), etc. 
+- Modify the images before export if needed (as above). 
+- Export icons and simple drawings as SVG files. Export the other pictures as JPG or, if they include transparency, PNG. 
+- Export non-SVG images in at least 2 versions: 1X for the regular display and 2X for the retina display. Some people also use 3X. If you have a mobile design then add the mobile versions of these images. 
+- Optimize your images to improve page performance. I've used [Squoosh](https://squoosh.app/) for JPG or PNG images and [SvgOmg](https://jakearchibald.github.io/svgomg/) for SVG images. Also, create WEBP or AVIF versions of non-SVG images; [Squoosh](https://squoosh.app/) can do it for you.
+- Give each set of images a meaningful name and place it in your Images folder.
+- Ensure you get the favicon image among others.
 
-23. Compare the output of your code to the design as you go along. Check various screen widths using browser dev tools. Also, zoom in and out to see how your code behaves. 
+## VIII. Implement images in your HTML and CSS 
 
-24. Proceed to **micro-layout** once satisfied with a macro-layout of your page or section. Before coding each micro-layout, analyze it as you did with macro-layouts. Implement a micro-layout in HTML and CSS. Choose HTML tags that best represent the content, use responsive design and the other principles given in this checklist. Preview your micro-layout in different browsers. 
+22. Decide where to implement an image: in HTML or CSS. You can ask yourself: “If I remove this picture, will the content still make sense?” If yes, then the image serves a decorative purpose and commonly gets implemented through CSS. 
 
-25. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Including an `outline-color` for `focus-visible` state. Ensure that the styles provide good contrast in the preview.
-    Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
+23. When implementing an image in HTML, use the following guidelines: 
+
+- Set the “width” and “height” of the image. Example: `<img src="logo.svg" width="400" height="300" alt="Logo">`. 
+- Always use the `alt` attribute. If the image is purely decorative or its meaning is rendered by the surrounding text, use an empty attribute `alt=''`. 
+- For different versions of the image use `<picture>` element with the `srcset` and `sizes` attributes. 
+- For below-the-fold images add `loading="lazy"` attribute to improve page performance. 
+- Use the `<figure>` and `<figcaption>` elements for better semantics, especially if the image has a caption.
+- Include a favicon image in the `<head>` section. Example: `<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>`.
+
+24. When implementing a background image through CSS, consider using `image-set()` to specify different versions of a large image. The example below includes fallbacks for browsers that do not support WEBP images:
+```
+    background-image: image-set(
+      url('/images/hero@1x.jpg') 1x,
+      url('/images/hero@2x.jpg') 2x,
+      url('/images/hero@3x.jpg') 3x,
+      url('/images/hero@1x.webp') 1x,
+      url('/images/hero@2x.webp') 2x,
+      url('/images/hero@3x.webp') 3x
+    );
+```
+
+25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. 
+
+## VIX. Complete the section at hand
+
+26. If you have earlier identified that your website is going to be viewed primarily on mobile devices, then follow a mobile-first approach in your CSS, creating the basic appearance of your page to fit a mobile device and then expanding it with media queries for larger screens. Start with a large page block. 
+
+27. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your desgin file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
+
+28. Where applicable, convert fixed sizes to relative sizes to create a responsive webpage. This may include percentages or viewpoint width/height values, media queries, fluid font sizes (with relevant em/rem values for paddings and margins), etc. 
+
+29. Compare the output of your code to the design as you go along. Check various screen widths using browser dev tools. Also, zoom in and out to see how your code behaves. 
+
+30. Proceed to **micro-layout** once satisfied with a macro-layout of your page or section. Before coding each micro-layout, analyze it as you did with macro-layouts. Implement a micro-layout in HTML and CSS. Choose HTML tags that best represent the content, use responsive design and the other principles given in this checklist. Preview your micro-layout in different browsers. 
+
+31. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Including an `outline-color` for `focus-visible` state. Ensure that the styles provide good contrast in the preview. Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
 
 
 
