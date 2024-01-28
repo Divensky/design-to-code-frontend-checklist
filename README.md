@@ -33,13 +33,13 @@ If you'd like to make any additions, corrections, or improvements, please fork t
 
 # The Checklist
 
-### I. Take a deep breath. 
+## I. Take a deep breath. 
 
 0. Do not panic. The checklist will guide you even if the project seems complex. Just focus on doing one step at a time, and you’ll arrive. 
 
 1. Select a code editor you will use for this project.
 
-### II. Set up the workspace 
+## II. Set up the workspace 
 
 2. Create a folder for this project. 
 
@@ -75,5 +75,23 @@ body {
 Then open the HTML file. You should see the page with the style you’ve assigned. If any problem, see if you’ve made a typo somewhere, maybe in the path to your CSS file or the filename. Once it works, congratulate yourself: your project is live! 
 
 9. Enable a preview of the document you're creating. Many tools include a `watch` function that will update your project whenever you make any changes. Or you might use a Live Server extension in VS Code.
+
+## III. Analyze 
+
+10. Examine the design and identify the **macro-layout** elements, such as the header, sections, aside, footer, etc. Look for potentially reusable components or patterns. Visually represent your macro-layout by sketching it on paper. 
+
+11. Identify the requirements and constraints for your project. At least, find out if this website is going to be viewed primarily on mobile or desktop devices. Add any needed steps to this checklist based on your requirements. 
+
+## IV. Create the HTML markup
+
+Note: The following steps of the checklist may be done by sections of your design. That is, you code one section by following the below steps, then the next section, etc. 
+
+12. Implement the macro-layout in your HTML file by putting necessary tags for the header, main, sections, aside, footer, etc. Use tag names that are descriptive of their content: for example, use `<section>` or `<figure>` rather than a `<div>`. Consider including "container" divs where you know you’ll need them. If you have both desktop and mobile versions, follow the desktop layout in the HTML. 
+
+13. Copy and paste the text from your design file into your HTML.
+
+14. Focus on the macro-layout. If the design includes many small details, for example in a `<table>` or a `<form>`, you might want to skip them for the moment and come back to them after you’ve got your macro-layout working in both HTML and CSS.
+    
+
 
    
