@@ -143,5 +143,21 @@ body {
 
 You should now see the new font in your preview. 
 
+## VII. Complete the section at hand
+
+20. If you have earlier identified that your website is going to be viewed primarily on mobile devices, then follow a mobile-first approach in your CSS, creating the basic appearance of your page to fit a mobile device and then expanding it with media queries for larger screens. Start with a large page block. 
+
+21. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your desgin file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
+
+22. Where applicable, convert fixed sizes to relative sizes to create a responsive webpage. This may include percentages or viewpoint width/height values, media queries, fluid font sizes (with relevant em/rem values for paddings and margins), etc. 
+
+23. Compare the output of your code to the design as you go along. Check various screen widths using browser dev tools. Also, zoom in and out to see how your code behaves. 
+
+24. Proceed to **micro-layout** once satisfied with a macro-layout of your page or section. Before coding each micro-layout, analyze it as you did with macro-layouts. Implement a micro-layout in HTML and CSS. Choose HTML tags that best represent the content, use responsive design and the other principles given in this checklist. Preview your micro-layout in different browsers. 
+
+25. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Including an `outline-color` for `focus-visible` state. Ensure that the styles provide good contrast in the preview.
+    Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
+
+
 
    
