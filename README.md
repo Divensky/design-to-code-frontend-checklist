@@ -41,30 +41,31 @@ If you'd like to make any additions, corrections, or improvements, please fork t
 
 ## II. Set up the workspace 
 
-2. Create a folder for this project. 
+2. Choose a name for this project. 
 
-3. Open the project folder in your terminal. Then follow these steps: 
+3. Open the project's parent folder in your terminal. If you are a new dev, follow the [beginner-friendly version](https://learntechwell.com/design-to-code-frontend-checklist/). Otherwise do this: 
 
 - Create your project. For example, in Vite, use `npm create vite@latest`.
-- Install relevant dependencies: `npm install`. 
-- Install any additional dependencies you know you’ll need. Maybe linters or SASS: `npm install -D sass`. 
-- Create/modify the folder structure: include `src` and/or `assets` folder, `public` or `dist` folder, etc. based on your preferred setup. 
+- When prompted, enter the project name and select your framework. 
+- Navigate into the new project with `cd <your new project name>` and install relevant dependencies: `npm install`. 
+- Install any additional dependencies you know you’ll need. Maybe linters or SASS: `npm install -D eslint`, `npm install -D sass`. 
+- Create/modify the folder structure if needed: include `src` and/or `assets` folder, `public` or `dist` folder, etc. based on your preferred setup.
+- Set up any needed editor configurations and preferences (perhaps `.prettierrc.json`, etc.).
 - Create/copy a `.gitignore` file and specify what should be ignored by Git.
 - Set up version control:
   `git init`
   `git add .`
   `git commit -m "initial commit"`
-- Create a new branch and switch to it. 
-- Assign your upstream repository with `git push -u origin <your branch name>`. 
-- Set up any needed editor configurations and preferences.
+- Assign your upstream repository with `git remote add origin <your repo path>`, `git push -u origin main`. Replace `main` with your branch name if different.
+- Create a new branch for development and switch to it: `git checkout -b <branch-name>`. 
 
-4. Create an empty index.html file and an empty style.css file in your folder structure. 
+4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this if you have boilerplate code already.  
 
 5. Open your index.html file in your code editor. Generate the boilerplate code for your HTML file (`<!DOCTYPE html>`, etc.), for example by typing an exclamation sign followed by a tab.
 
 6. Replace the text in the `<title>` tag with the actual title of your document. Add any other relevant meta tags, for example `<meta name="description" content="Your description">`.
 
-7. Within the `<head>` section of your HTML file, add a `<link>` tag to connect your style.css file. Example: `<link rel="stylesheet" href="css/style.css">`. 
+7. Within the `<head>` section of your HTML file, add a `<link>` tag to connect your style.css file. Example: `<link rel="stylesheet" href="css/style.css">`. Or replace the boilerplate code with your actual code. 
 
 8. Test to see if it works. Put a simple rule into your CSS file, such as 
 ```
