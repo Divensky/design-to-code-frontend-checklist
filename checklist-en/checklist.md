@@ -26,7 +26,7 @@
 - Assign your upstream repository with `git remote add origin <your repo path>`, `git push -u origin main`. Replace `main` with your branch name if different.
 - Create a new branch for development and switch to it: `git checkout -b <branch-name>`. 
 
-4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this and next step if `npm create` has already set up your boilerplate code.  
+4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this and the next step if `npm create` has already set up your boilerplate code.  
 
 5. Open your index.html file in your code editor. Generate the boilerplate code for your HTML file (`<!DOCTYPE html>`, etc.), for example by typing an exclamation sign followed by a tab.
 
