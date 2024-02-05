@@ -77,6 +77,7 @@ Note: The following steps of the checklist may be done by sections of your desig
 ```
 - Perhaps use CSS reset or normalize browser default styles if this is preferred by your team. 
 - If not using reset, perhaps you want to set box-sizing for the entire project: 
+
 ```
 html {
   box-sizing: border-box;
@@ -147,6 +148,7 @@ You should now see the new font in your preview.
       url('/images/hero@2x.webp') 2x,
       url('/images/hero@3x.webp') 3x
     );
+    
 ```
 
 25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. Preview your images on the page and ensure they display correctly at different screen widths, zoom levels, and in different browsers.
