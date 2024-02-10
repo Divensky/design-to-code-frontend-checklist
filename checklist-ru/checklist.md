@@ -1,82 +1,83 @@
-# The Checklist
+# Чек-лист
 
-## I. Take a deep breath. 
+## I. Сделайте глубокий вдох. 
 
-0. Do not panic. The checklist will guide you even if the project seems complex. Just focus on doing one step at a time, and you’ll arrive. 
+0. Новый проект может показаться сложным. Не отступайте. Этот чек-лист вам поможет. Просто делайте один шаг в одну единицу времени, и все получится. 
 
-1. Select a code editor you will use for this project.
+1. Выберите редактор кода, который вы будете использовать для этого проекта.
 
-## II. Set up the workspace 
+## II. Настройте рабочее пространство 
 
-2. Choose a name for this project. 
+2. Выберите, как вы назовёте проект; название должно быть на английском языке, без пробелов, можно с дефисами.
 
-3. Open the project's parent folder in your terminal. If you are a new dev, follow the [beginner-friendly version](https://learntechwell.com/design-to-code-frontend-checklist/). Otherwise do this: 
+3. Откройте терминал и перейтите в родительскую папку проекта (ту, внутри которой вы планируете создать этот проект). Если вы начинающий разработчик, следуйте [версии для начинающих](https://learntechwell.com/design-to-code-frontend-checklist/). Если проект уже создан в удалённом репозитории, используйте `git clone`. Для нового проекта сделайте следующее: 
 
-- Create your project. For example, in Vite, use `npm create vite@latest`.
-- When prompted, enter the project name and select your framework. 
-- Navigate into the new project with `cd <your new project name>` and install relevant dependencies: `npm install`. 
-- Install any additional dependencies you know you’ll need. Maybe linters or SASS: `npm install -D eslint`, `npm install -D sass`. 
-- Create/modify the folder structure if needed: include `src` and/or `assets` folder, `public` or `dist` folder, etc. based on your preferred setup.
-- Set up any needed editor configurations and preferences (perhaps `.prettierrc.json`, etc.).
-- Create/copy a `.gitignore` file and specify what should be ignored by Git.
-- Set up version control:
-  `git init`
-  `git add .`
-  `git commit -m "initial commit"`
-- Assign your upstream repository with `git remote add origin <your repo path>`, `git push -u origin main`. Replace `main` with your branch name if different.
-- Create a new branch for development and switch to it: `git checkout -b <branch-name>`. 
+- Создайте проект. Например, в Vite используйте `npm create vite@latest`.
+- В ответ на запрос введите название проекта, которое вы перед этим выбрали, и выберите фреймворк. 
+- Перейдите в новый проект с помощью `cd <имя вашего нового проекта>` и установите все необходимые зависимости: `npm install`. 
+- Установите все дополнительные зависимости, которые, как вы знаете, вам понадобятся. Возможно, линтеры или SASS: `npm install -D eslint`, `npm install -D sass`. 
+- Создайте/измените структуру папок, если это необходимо: включите папку `src` и/или `assets`, папку `public` или `dist` и т.д. в зависимости от ваших предпочтений.
+- Настройте все необходимые конфигурации и предпочтения редактора (возможно, `.prettierrc.json` и т.д.).
+- Инициализируйте местный Git-репозиторий: git init.
+- Создайте/скопируйте файл `.gitignore` и укажите, что должно игнорироваться Git'ом.
+- Добавьте файлы и сделайте первый коммит: 
+   `git add .`
+  `git commit -m "initial commit"`.
+- Укажите удаленный репозиторий с помощью `git remote add origin <путь к вашему репозиторию>`. Этот путь берется из Git. 
+- Загрузите ваш initial commit в удаленный репозиторий: `git push -u origin main`. Замените `main` на название вашей ветки, если оно отличается. Если надо, то создайте pull request/merge request. 
+- Создайте новую ветку для разработки и переключитесь на неё: `git checkout -b <название ветки>`. 
 
-4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this if you have boilerplate code already.  
+4. Создайте пустой файл index.html и пустой файл style.css в структуре папок. Пропустите этот и следующий пункт, если `npm create` уже создал начальный код.  
 
-5. Open your index.html file in your code editor. Generate the boilerplate code for your HTML file (`<!DOCTYPE html>`, etc.), for example by typing an exclamation sign followed by a tab.
+5. Откройте файл index.html в редакторе кода. Создайте код шаблона для HTML-файла (`<!DOCTYPE html>` и т. д.), например, напечатав восклицательный знак, за которым следует табуляция.
 
-6. Replace the text in the `<title>` tag with the actual title of your document. Add any other relevant meta tags, for example `<meta name="description" content="Your description">`.
+6. Замените текст в теге `<title>` на реальное название вашего документа. Добавьте любые другие необходимые метатеги, например `<meta name="description" content="Ваше описание">`.
 
-7. Within the `<head>` section of your HTML file, add a `<link>` tag to connect your style.css file. Example: `<link rel="stylesheet" href="css/style.css">`. Or replace the boilerplate code with your actual code. 
+7. В разделе `<head>` вашего HTML-файла добавьте тег `<link>` для подключения вашего файла style.css. Пример: `<link rel="stylesheet" href="css/style.css">`. Или замените шаблонный код своим настоящим кодом. 
 
-8. Test to see if it works. Put a simple rule into your CSS file, such as 
+8. Проверьте, работает ли это. Поместите в свой CSS-файл простое правило, например 
 ```
 body {
     background-color: green;
 }
 ```
-Then open the HTML file. You should see the page with the style you’ve assigned. If any problem, see if you’ve made a typo somewhere, maybe in the path to your CSS file or the filename. Once it works, congratulate yourself: your project is live! 👏
+Затем откройте HTML-файл в браузере. Вы должны увидеть страницу с заданным вами background-color. Если возникли проблемы, посмотрите, не сделали ли вы где-то опечатку, возможно, в пути к CSS-файлу или в имени файла. Как только все заработает, поздравьте себя: ваш проект запустился! 👏
 
-9. Enable a preview of the document you're creating. Many tools include a `watch` function that will update your project whenever you make any changes. Or you might use a Live Server extension in VS Code.
+9. Включите предпросмотр создаваемого документа. Многие инструменты включают функцию `watch`, которая обновляет проект каждый раз, когда вы вносите изменения. Или можно использовать расширение Live Server в VS Code.
 
-## III. Analyze 
+## III. Анализ 
 
-10. Examine the design and identify the **macro-layout** elements, such as the header, sections, aside, footer, etc. Look for potentially reusable components or patterns. It's helpful to visually represent your macro-layout by sketching it on paper. 
+10. Изучите дизайн и выявите элементы **макроразметки**, такие как хедер, секции, aside, футер и т. д. Полезно визуально представить макроразметку, набросав ее на бумаге. Обратите внимание на компоненты, которые можно будет использовать повторно.
 
-11. Identify the requirements and constraints for your project. At least, find out if this website is going to be viewed primarily on mobile or desktop devices. Add any needed steps to this checklist based on your specific requirements: maybe you need to focus on accessibility, integration, etc. 
+11. Выявите требования и ограничения для вашего проекта. Как минимум, выясните, будет ли этот сайт просматриваться в основном на мобильных или десктопных устройствах. Добавьте в этот чек-лист все необходимые шаги, исходя из ваших конкретных требований: возможно, вам нужно сосредоточиться на доступности, интеграции и т. д. 
 
-## IV. Create the HTML markup
+## IV. Создайте HTML-разметку
 
-Note: The following steps of the checklist may be done by sections of your design. That is, you code one section as below, then the next section, etc. 
+Примечание: Следующие шаги чек-листа можно выполнять по секциям вашего дизайна. То есть вы прописываете одну секцию по шагам ниже, затем следующую и т. д. По завершении каждой секции можно подавать отдельный pull request. 
 
-12. Implement the macro-layout in your HTML file by putting necessary tags for the header, main, sections, aside, footer, etc. Use tag names that are descriptive of their content: for example, use `<section>` or `<figure>` rather than a `<div>`. Consider including "container" divs where you know you’ll need them. If you have both desktop and mobile versions, follow the desktop layout in the HTML. 
+12. Реализуйте макроразметку в вашем HTML-файле: расставьте необходимые теги для header, main, sections, aside, footer и т. д. По максимуму используйте теги, которые имеют собственное смысловое значение, например, используйте `<section>` или `<figure>`, а не `<div>`, когда применимо. Включите div'ы "container" там, где они точно понадобятся. Если в дизайне есть десктопная и мобильная версии, пишите HTML согласно дизайну десктопа. 
 
-13. Copy and paste the text from your design file into your HTML.
+13. Скопируйте и вставьте текст из файла дизайна в HTML. См. подробнее в [версии для начинающих](https://learntechwell.com/design-to-code-frontend-checklist/), если нужно.
 
-14. Focus on the macro-layout. If the design includes many small details, for example in a `<table>` or a `<form>`, you might want to skip them for the moment and come back to them after you’ve got your macro-layout working in both HTML and CSS.
+14. Сосредоточьтесь на макроразметке. Если дизайн включает множество мелких деталей, например, в `<table>` или `<form>`, можно пока пропустить их и вернуться к ним после того, как реализуете всю макроразметку в HTML и CSS.
     
-## V. Create the first part of the CSS code
+## V. Создайте первую часть CSS-кода.
 
-15. Position the preview of your file alongside the design file on your screen so you can see both simultaneously to check your output. 
+15. Расположите предпросмотр рядом с дизайном на экране, чтобы видеть оба одновременно для проверки результата.
 
-16. Select the CSS naming methodology or library you’re going to use. (Maybe [BEM](http://getbem.com/introduction/) or something else.)  
+16. Выберите методику именования CSS или библиотеку, которую вы собираетесь использовать. (Возможно, [BEM](http://getbem.com/introduction/) или что-то другое).  
 
-17. Write any initial CSS styles that apply to the entire document. The common points to consider at this stage are: 
-- Set the `body` margin to 0, as the browser adds an automatic margin of 8px.
-- Create a `.container` style to define the max-width of your project and to center it. 
-- Create any needed custom properties in the root, for example for the theme-color:
+17. Напишите стили CSS, которые будут применяться ко всему документу. Обычно на этом этапе учитывают следующие моменты: 
+- Установите для `body` значение margin: 0, так как браузер автоматически добавляет margin в 8px.
+- Создайте стиль `.container`, в котором определите максимальную ширину и отцентрируйте текст. 
+- Создайте необходимые кастомные свойства в root, например:
 ```
 :root {
   --theme-color: #314f9b;
 }
 ```
-- Perhaps use CSS reset or normalize browser default styles if this is preferred by your team. 
-- If not using reset, perhaps you want to set box-sizing for the entire project: 
+- Возможно, задействуйте CSS reset или нормализацию стилей браузера, если ваша команда это использует. 
+- Если вы не используете reset, возможно, вы хотите установить box-sizing для всего проекта: 
 ```
 html {
   box-sizing: border-box;
@@ -86,58 +87,58 @@ html {
   box-sizing: inherit;
 }
 ```
-- If relevant, set max-width for images:
+- Если необходимо, установите максимальную ширину для изображений:
 ```
 img {
   max-width: 100%;
 }
 ```
 
-## VI. Add the fonts 
+## VI. Добавьте шрифты 
 
-18. Identify the fonts used in the design. 
+18. Выявите шрифты, используемые в дизайне. 
 
-19. Connect the fonts.
+19. Подключите шрифты.
     
-- If you use Google Fonts or a similar font hosting service, include the `<link>` element(s) for the font(s) under `<head>` in your HTML, above the link to your style.css. Be aware that while this option is easier, it might not be as performant. 
-- Alternatively, download the fonts into your project and connect them from there. [Google Fonts Helper](https://gwfh.mranftl.com/) might help. Select the "Modern Browser" option. Copy the `@font-face` CSS rule(s) into your CSS file, download the zip file with fonts and extract them into the Fonts folder. Make sure that the path to this folder inside the `@font-face` rule(s) is correct. 
+- Если вы используете Google Fonts или аналогичный сервис хостинга шрифтов, включите элемент(ы) `<link>` для шрифта(ов) под `<head>` в HTML, над ссылкой на style.css. Имейте в виду, что хотя этот вариант проще, он может замедлять загрузку страницы. 
+- В качестве альтернативы загрузите шрифты в свой проект и подключите их оттуда. В этом может помочь [Google Fonts Helper](https://gwfh.mranftl.com/). Выберите опцию " Modern Browser". Скопируйте CSS-правило (правила) `@font-face` в свой CSS-файл, скачайте zip-файл со шрифтами и распакуйте их в папку Fonts. Убедитесь, что путь к этой папке в правиле `@font-face` правильный. 
 
-Then, in your CSS file, assign the font and provide a generic fallback font. Example: 
+Затем в своем CSS-файле назначьте шрифт и укажите резервный шрифт. Пример: 
 ```
 body {
   font-family: Roboto, sans-serif;
 }
 ```
 
-You should now see the new font in your preview. 
+Теперь вы должны увидеть новый шрифт в предпросмотре. 
 
-## VII. Export images from the design
+## VII. Экспортируйте изображения из дизайна
 
-20. Conditional: if an image has rounded corners, or has overlying elements, or has opacity or such effects applied, remove these effects before exporting your image so you can then implement these effects through CSS. 
+20. Условности: если у изображения закругленные углы, или над ним есть другие элементы, или к нему применена непрозрачность или подобные эффекты, удалите их перед экспортом изображения, чтобы затем реализовать эти эффекты с помощью CSS. Создайте копию Фигма-файла в своих черновиках, там вы сможете манипулировать изображениями. 
 
-21. Export any images from your design file. Use the following guidelines:  
+21. Экспортируйте все изображения из файла дизайна. Используйте следующие рекомендации:  
 
-- Modify the images before export if needed (as above). 
-- Export icons and simple drawings as SVG files. Export the other pictures as JPG or, if they include transparency, PNG. 
-- Export non-SVG images in at least 2 versions: 1X for the regular display and 2X for the retina display. Some people also use 3X. If you have a mobile design then add the mobile versions of these images. 
-- Optimize your images to improve page performance. I've used [Squoosh](https://squoosh.app/) for JPG or PNG images and [SvgOmg](https://jakearchibald.github.io/svgomg/) for SVG images. Also, create WEBP or AVIF versions of non-SVG images; [Squoosh](https://squoosh.app/) can do it for you.
-- Give each set of images a meaningful name and place it in your Images folder.
-- Ensure you get the favicon image among others.
+- При необходимости измените изображения перед экспортом (как указано выше). 
+- Экспортируйте иконки и простые рисунки в файлы SVG. Остальные изображения экспортируйте в JPG или, если они содержат прозрачность, в PNG. 
+- Экспортируйте не-SVG изображения как минимум в двух вариантах: 1X для обычного дисплея и 2X для дисплея retina. Некоторые также используют 3X. Если у вас есть мобильный дизайн помимо десктопного, добавьте мобильные версии этих изображений. 
+- Оптимизируйте изображения, чтобы улучшить быстродействие. Используйте [Squoosh](https://squoosh.app/) для изображений JPG или PNG и [SvgOmg](https://jakearchibald.github.io/svgomg/) для изображений SVG. Также создайте WEBP- или AVIF-версии не SVG-изображений с помощью [Squoosh](https://squoosh.app/).
+- Дайте каждому изображению осмысленное английское название и поместите в папку Images.
+- Убедитесь, что среди изображений есть фавиконка.
 
-## VIII. Implement images in your HTML and CSS 
+## VIII. Реализуйте изображения в HTML и CSS 
 
-22. Decide where to implement an image: in HTML or CSS. You can ask yourself: “If I remove this picture, will the content still make sense?” If yes, then the image serves a decorative purpose and commonly gets implemented through CSS. 
+22. Определитесь, где реализовать изображение: в HTML или CSS. Вы можете спросить себя: "Без этой картинки будет ли контент иметь смысл?". Если да, то изображение несет декоративную функцию, обычно в таком случае его реализуют через CSS. 
 
-23. When implementing an image in HTML, use the following guidelines: 
+23. При реализации изображения в HTML используйте следующие рекомендации: 
 
-- Set the “width” and “height” of the image. Example: `<img src="logo.svg" width="400" height="300" alt="Logo">`. 
-- Always use the `alt` attribute. If the image is purely decorative or its meaning is rendered by the surrounding text, use an empty attribute `alt=''`. 
-- For different versions of the image use `<picture>` element with the `srcset` and `sizes` attributes. 
-- For below-the-fold images add `loading="lazy"` attribute to improve page performance. 
-- Use the `<figure>` and `<figcaption>` elements for better semantics, especially if the image has a caption.
-- Include a favicon image in the `<head>` section. Example: `<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>`.
+- Задавайте " width" и " height" изображения. Пример: `<img src="logo.svg" width="400" height="300" alt="Logo">`. 
+- Всегда используйте атрибут `alt`. Если изображение чисто декоративное или его смысл передается окружающим текстом, используйте пустой атрибут `alt=''`. 
+- Для разных версий изображения используйте элемент `<picture>` с атрибутами `srcset` и `sizes`. 
+- Для изображений, расположенных ниже первого экрана, добавьте атрибут `loading="lazy"`, чтобы улучшить быстродействие страницы. 
+- Используйте элементы `<figure>` и `<figcaption>` для улучшения семантики, особенно если у изображения есть подпись.
+- Включите фавиконку в раздел `<head>`. Пример: `<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>`.
 
-24. When implementing a background image through CSS, consider using `image-set()` to specify different versions of a large image. The example below includes fallbacks for browsers that do not support WEBP images:
+24. При реализации фонового изображения с помощью CSS используйте `image-set()`, чтобы указать разные версии большого изображения. В приведенном ниже примере предусмотрены запасные варианты для браузеров, не поддерживающих WEBP-изображения:
 ```
     background-image: image-set(
       url('/images/hero@1x.jpg') 1x,
@@ -149,27 +150,27 @@ You should now see the new font in your preview.
     );
 ```
 
-25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. Preview your images on the page and ensure they display correctly at different screen widths, zoom levels, and in different browsers.
+25. Убедитесь, что ваш CSS рассчитан на [адаптивные изображения](https://web.dev/learn/design/responsive-images). Возможно, нужно использовать `max-width: 100%`, `background-size: cover`, `object-fit` и т. д. При предпросмотре изображений убедитесь, что они корректно отображаются при различной ширине экрана, уровне масштабирования и в разных браузерах.
 
-## VIX. Complete the section at hand
+## VIX. Завершите текущий раздел
 
-26. If you have earlier identified that your website is going to be viewed primarily on mobile devices, then follow a mobile-first approach in your CSS, creating the basic appearance of your page to fit a mobile device and then expanding it with media queries for larger screens. Start with a large page block. 
+26. Если вы ранее определили, что ваш сайт будет просматриваться в основном на мобильных устройствах, то следуйте в CSS подходу mobile-first, при котором базовый вид страницы создается под мобильное устройство, а затем расширяется с помощью медиазапросов для больших экранов. Начните с большого блока страницы. 
 
-27. Get the sizes, colors, etc. from your design file as you go along. Measure margin/padding sizes. If your design file provides such properties as `position: absolute` or `display: flex`, disregard them and use your own judgment to set these. 
+27. По ходу работы получайте размеры, цвета и т. д. из файла дизайна. Измеряйте размеры полей/отступов. Если в файле дизайна указаны такие свойства, как `position: absolute` или `display: flex`, не обращайте на них внимания - задавайте их самостоятельно. 
 
-28. Where applicable, convert fixed sizes to relative sizes to create a responsive webpage. This may include percentages or viewpoint width/height values, media queries, fluid font sizes (with relevant em/rem values for paddings and margins), etc. 
+28. При необходимости преобразуйте фиксированные размеры в относительные, чтобы создать адаптивную веб-страницу. Для этого могут использоваться проценты или значения viewpoint width/height, медиазапросы, переменные размеры шрифтов (с соответствующими значениями em/rem для отступов и полей) и т. д. 
 
-29. Compare the output of your code to the design as you go along. Check various screen widths using browser dev tools. Also, zoom in and out to see how your code behaves. 
+29. По ходу работы сравнивайте результат работы кода с дизайном. Проверяйте различные значения ширины экрана с помощью браузерных инструментов разработки. Также увеличивайте и уменьшайте масштаб, чтобы увидеть, как ведет себя ваш код. 
 
-30. Proceed to **micro-layout** once satisfied with a macro-layout of your page or section. Before coding each micro-layout, analyze it as you did with macro-layouts. Implement a micro-layout in HTML and CSS. Choose HTML tags that best represent the content, use responsive design and the other principles given in this checklist. Preview your micro-layout in different browsers. 
+30. Перейдите к **микроразметке**, когда будете удовлетворены макроразметкой страницы или раздела. Перед созданием каждого микро-макета проанализируйте его, как вы это делали с макро-макетом. Реализуйте микромакет в HTML и CSS. Выберите HTML-теги, которые лучше всего отображают содержимое, используйте адаптивный дизайн и другие принципы, приведенные в этом чек-листе. Сделайте предпросмотр микромакета в разных браузерах. 
 
-31. Take care of any buttons or links. Style the `:hover`, `:focus`, `:focus-visible`, and `:active` states for these elements. Include an `outline-color` for the `:focus-visible` state. Ensure that the styles provide good contrast in the preview. Further, ensure that the buttons are large enough to be pressed easily. The minimum recommended [touch target size](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) is 42px. 
+31. Для всех кнопок и ссылок стилизуйте состояния `:hover`, `:focus`, `:focus-visible` и `:active`. Укажите `outline-color` для состояния `:focus-visible`. Убедитесь, что стили обеспечивают хороший контраст в предпросмотре. Кроме того, убедитесь, что кнопки достаточно большие, чтобы их можно было легко нажать. Минимальный рекомендуемый размер [кнопки для нажатия](https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons) составляет 42px. 
 
-## Part X. Final test 
+## Часть X. Заключительный тест 
 
-32. Preview your completed section or page at different screen widths, zoom levels, and in different browsers. If your preview looks different than what you’d expect it to, use the browser’s Dev Tools to help spot the cause. You will soon see the page that displays the way you want to! 
+32. Сделайте предпросмотр готового раздела или страницы при различной ширине экрана, уровне масштабирования и в разных браузерах. Если предпросмотр выглядит не так, как вы ожидали, воспользуйтесь браузерными инструментами разработчика, чтобы найти причину. Вскоре вы увидите страницу, которая отображается так, как вы хотите! 
 
 ***
 
-It may seem like a lot, but in reality, once you get familiar with it, this is easy. Just go step by step, and you will be rewarded with a beautiful, live page that you’ve created out of nothing!  
+Может показаться, что здесь много всего, но на самом деле, как только вы освоитесь, все станет просто. Просто делайте шаг за шагом, и вы будете вознаграждены красивой, живой страницей, которую вы создали из ничего!  
    

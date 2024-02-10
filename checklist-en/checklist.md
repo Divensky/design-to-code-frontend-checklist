@@ -26,7 +26,7 @@
 - Assign your upstream repository with `git remote add origin <your repo path>`, `git push -u origin main`. Replace `main` with your branch name if different.
 - Create a new branch for development and switch to it: `git checkout -b <branch-name>`. 
 
-4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this and next step if `npm create` has already set up your boilerplate code.  
+4. Create an empty index.html file and an empty style.css file in your folder structure. Skip this and the next step if `npm create` has already set up your boilerplate code.  
 
 5. Open your index.html file in your code editor. Generate the boilerplate code for your HTML file (`<!DOCTYPE html>`, etc.), for example by typing an exclamation sign followed by a tab.
 
@@ -77,6 +77,7 @@ Note: The following steps of the checklist may be done by sections of your desig
 ```
 - Perhaps use CSS reset or normalize browser default styles if this is preferred by your team. 
 - If not using reset, perhaps you want to set box-sizing for the entire project: 
+
 ```
 html {
   box-sizing: border-box;
@@ -147,6 +148,7 @@ You should now see the new font in your preview.
       url('/images/hero@2x.webp') 2x,
       url('/images/hero@3x.webp') 3x
     );
+    
 ```
 
 25. Ensure that your CSS includes [responsive image](https://web.dev/learn/design/responsive-images) properties. This may include `max-width: 100%`, `background-size: cover`, `object-fit`, etc. Preview your images on the page and ensure they display correctly at different screen widths, zoom levels, and in different browsers.
